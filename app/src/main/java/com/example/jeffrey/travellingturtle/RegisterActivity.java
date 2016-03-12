@@ -69,14 +69,17 @@ public class RegisterActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... params) {
+
             String result = "";
             InputStream in = null;
-
             URL url = null;
+            int status;
+
             try {
                 url = new URL("http://www.android.com/");
                 HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
                 urlConnection.setDoOutput(true);
+                //status = urlConnection.getResponseCode();
             } catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
