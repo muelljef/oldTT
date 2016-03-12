@@ -21,7 +21,8 @@
         <activity android:name=".ListTrips" />
         <activity android:name=".TripActivity" />
         <activity android:name=".AddTripActivity" />
-        <activity android:name=".UpdateTripActivity"></activity>
+        <activity android:name=".UpdateTripActivity" />
+        <activity android:name=".AddLocationActivity"></activity>
     </application>
 
 </manifest>

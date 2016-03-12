@@ -25,11 +25,13 @@ public class TripActivity extends AppCompatActivity {
 
     TextView tripTitleView;
     TextView tripDescriptionView;
+    TextView tripLocationsView;
     String tripTitle;
     String tripId;
+    String tripDescription;
+    String tripLocations;
     String username;
     String password;
-    String tripDescription;
 
     public void deleteTrip(View view) {
 
@@ -58,6 +60,18 @@ public class TripActivity extends AppCompatActivity {
 
     }
 
+    public void gotoAddLocationPage(View view) {
+
+        Intent addLocationIntent = new Intent(getApplicationContext(), AddLocationActivity.class);
+        addLocationIntent.putExtra("username", username);
+        addLocationIntent.putExtra("password", password);
+        addLocationIntent.putExtra("tripId", tripId);
+        addLocationIntent.putExtra("tripTitle", tripTitle);
+        addLocationIntent.putExtra("tripLocations", tripLocations);
+        startActivity(addLocationIntent);
+
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +79,7 @@ public class TripActivity extends AppCompatActivity {
 
         tripTitleView = (TextView) findViewById(R.id.tripTitleView);
         tripDescriptionView = (TextView) findViewById(R.id.tripDescriptionView);
+        tripLocationsView = (TextView) findViewById(R.id.textView);
 
         Intent intent = getIntent();
         tripTitle = intent.getStringExtra("tripTitle");
@@ -151,8 +166,10 @@ public class TripActivity extends AppCompatActivity {
                 JSONObject dataObject = jsonObject.getJSONObject("data");
                 tripTitle = dataObject.getString("title");
                 tripDescription = dataObject.getString("description");
+                tripLocations = dataObject.getString("locations");
                 tripTitleView.setText(tripTitle);
                 tripDescriptionView.setText(tripDescription);
+                tripLocationsView.setText(tripLocations);
 
             } catch (JSONException e) {
                 e.printStackTrace();
