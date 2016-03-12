@@ -72,6 +72,12 @@ public class TripActivity extends AppCompatActivity {
         username = intent.getStringExtra("username");
         password = intent.getStringExtra("password");
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
         String url = "http://54.206.28.148/api/v1/trips/";
         try {
             url += URLEncoder.encode(tripId, "UTF-8");
