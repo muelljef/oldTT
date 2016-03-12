@@ -72,7 +72,7 @@ public class ListTrips extends AppCompatActivity {
                 i.putExtra("username", username);
                 i.putExtra("password", password);
                 i.putExtra("tripTitle", trips.get(position));
-                i.putExtra("id", ids.get(position));
+                i.putExtra("tripId", ids.get(position));
                 startActivity(i);
             }
         });
