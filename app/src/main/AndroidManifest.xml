@@ -20,7 +20,8 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".ListTrips" />
         <activity android:name=".TripActivity" />
-        <activity android:name=".AddTripActivity"></activity>
+        <activity android:name=".AddTripActivity" />
+        <activity android:name=".UpdateTripActivity"></activity>
     </application>
 
 </manifest>

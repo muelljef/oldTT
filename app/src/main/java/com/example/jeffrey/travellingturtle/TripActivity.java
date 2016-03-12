@@ -48,7 +48,13 @@ public class TripActivity extends AppCompatActivity {
 
     public void updateTripPage(View view) {
 
-        //Intent updateIntent = new Intent(getApplicationContext(), );
+        Intent updateIntent = new Intent(getApplicationContext(), UpdateTripActivity.class);
+        updateIntent.putExtra("username", username);
+        updateIntent.putExtra("password", password);
+        updateIntent.putExtra("tripId", tripId);
+        updateIntent.putExtra("tripTitle", tripTitle);
+        updateIntent.putExtra("tripDescription", tripDescription);
+        startActivity(updateIntent);
 
     }
 
