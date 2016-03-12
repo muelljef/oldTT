@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".ListTrips" />
-        <activity android:name=".TripActivity"></activity>
+        <activity android:name=".TripActivity" />
+        <activity android:name=".AddTripActivity"></activity>
     </application>
 
 </manifest>
