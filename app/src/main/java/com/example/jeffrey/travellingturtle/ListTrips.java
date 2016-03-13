@@ -10,7 +10,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -150,10 +149,7 @@ public class ListTrips extends AppCompatActivity {
             try {
                 JSONObject jsonObject = new JSONObject(result);
                 JSONArray jsonTrips = jsonObject.getJSONArray("data");
-                if (jsonTrips.isNull(0)) {
-                    Toast.makeText(ListTrips.this, "Sorry there was an error", Toast.LENGTH_LONG).show();
-                } else {
-
+                if (!jsonTrips.isNull(0)) {
                     for (int i = 0; i < jsonTrips.length(); i++) {
                         JSONObject trip = jsonTrips.getJSONObject(i);
                         trips.add(trip.getString("title"));

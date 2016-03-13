@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 //FAILURE
                 if(jsonObject.has("error")) {
-                    Toast.makeText(LoginActivity.this, "Sorry an error occurred", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Sorry that username and password combination is not valid", Toast.LENGTH_SHORT).show();
                     return;
                 }
 

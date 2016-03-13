@@ -138,7 +138,8 @@ public class RegisterActivity extends AppCompatActivity {
                 JSONObject dataObject = jsonObject.getJSONObject("data");
                 if(dataObject.has("id")) {
                     Toast.makeText(RegisterActivity.this, "Registration was successful, please proceed to the Login Page", Toast.LENGTH_SHORT).show();
-
+                    registerUsernameText.setText("");
+                    registerPasswordText.setText("");
                 }
 
             } catch (JSONException e) {

@@ -48,8 +48,7 @@
         android:layout_above="@+id/textView7"
         android:layout_toRightOf="@+id/textView7"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:text="testUser" />
+        android:layout_alignParentEnd="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -60,8 +59,7 @@
         android:layout_alignBottom="@+id/textView7"
         android:layout_toRightOf="@+id/textView6"
         android:layout_alignRight="@+id/loginUsernameText"
-        android:layout_alignEnd="@+id/loginUsernameText"
-        android:text="password" />
+        android:layout_alignEnd="@+id/loginUsernameText" />
 
     <Button
         android:layout_width="wrap_content"
