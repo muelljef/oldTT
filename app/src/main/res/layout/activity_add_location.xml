@@ -98,6 +98,7 @@
         android:id="@+id/addLocation"
         android:layout_marginTop="51dp"
         android:layout_below="@+id/latitudeView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="addLocation" />
 
 </RelativeLayout>

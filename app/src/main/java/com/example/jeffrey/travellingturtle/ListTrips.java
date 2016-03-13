@@ -83,6 +83,7 @@ public class ListTrips extends AppCompatActivity {
         super.onResume();
 
         trips.clear();
+        ids.clear();
 
         GetTripsTask task = new GetTripsTask();
         String url = "http://54.206.28.148/api/v1/trips";
